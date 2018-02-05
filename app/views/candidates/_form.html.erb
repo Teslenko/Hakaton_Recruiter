@@ -31,55 +31,67 @@
         <td></td>
       </tr>
     </div>
+
     <tr>
       <td  class="col-md-2 left"><%= form.label :name %></td>
       <td class="right"><%= form.text_field :name, id: :candidate_name %></td>
     </tr>
+
     <tr>
       <td  class="col-md-2 left"><%= form.label :description %></td>
       <td class="right"><%= form.text_area :description, id: :candidate_description %></td>  <!--Candidate Desription-->
     </tr>
-    <tr>
-    <td  class="col-md-2 left"><%= form.label :dev_language %></td>
-    <td class="right"><%= form.text_area :dev_language, id: :candidate_dev_language %></td> <!-- IOS or Java-->
-    </tr>
-    <td  class="col-md-2 left"><%= form.label :level_skills %></td>
-    <td class="right"><%= form.text_area :level_skills, id: :candidate_level_skills %></td> <!-- IOS or Java-->
-    <tr>
-    <td  class="col-md-2 left"><%= form.label :suggest_project %></td>
-    <td class="right"><%= form.text_area :suggest_project, id: :candidate_suggest_project %></td> <!--Project when Candidate are Working now-->
-    </tr>
-    <tr>
-    <td  class="col-md-2 left"><%= form.label :contact_data %></td>
-    <td class="right"><%= form.text_area :contact_data, id: :candidate_contact_data %></td>  <!--Contakts data +380946783721-->
-    </tr>
-    <tr>
-    <td  class="col-md-2 left"><%= form.label :present_job %></td>
-    <td class="right"><%= form.text_area :present_job, id: :candidate_present_job %></td> <!--The Place where present work-->
-    </tr>
-    <tr>
-    <td  class="col-md-2 left"><%= form.label :expected_salary %></td>
-    <td class="right"><%= form.text_area :expected_salary, id: :candidate_expected_salary %></td> <!--Expected Result of Salary Candidate-->
-    </tr>
-    <tr>
-    <td  class="col-md-2 left"><%= form.label :final_salary %></td>
-    <td class="right"><%= form.text_area :final_salary, id: :candidate_final_salary %></td> <!--Finale Salary When Candidate commen in job-->
-    </tr>
-    <tr>
-    <td  class="col-md-2 left"><%= form.label :data_from %></td>
-    <td class="right"><%= form.text_area :data_from, id: :candidate_data_from %></td> <!--Where we was taked the data for candidate - Libkedin...-->
-    </tr>
-    <tr>
 
-    <td  class="col-md-2 left"><%= form.label :cand_comment %></td>
-    <td class="right"><%= form.text_area :cand_comment, id: :candidate_cand_comment  %></td>
-
-
+    <tr>
+      <td  class="col-md-2 left"><%= form.label :dev_language %></td>
+      <td class="right"><%= form.text_area :dev_language, id: :candidate_dev_language %></td> <!-- IOS or Java-->
     </tr>
+
+    <tr>
+      <td  class="col-md-2 left"><%= form.label :level_skills %></td>
+      <td class="right"><%= form.text_area :level_skills, id: :candidate_level_skills %></td> <!-- IOS or Java-->
+    </tr>
+
+    <tr>
+      <td  class="col-md-2 left"><%= form.label :suggest_project %></td>
+      <td class="right"><%= form.text_area :suggest_project, id: :candidate_suggest_project %></td> <!--Project when Candidate are Working now-->
+    </tr>
+
+    <tr>
+      <td  class="col-md-2 left"><%= form.label :contact_data %></td>
+      <td class="right"><%= form.text_area :contact_data, id: :candidate_contact_data %></td>  <!--Contakts data +380946783721-->
+    </tr>
+
+    <tr>
+      <td  class="col-md-2 left"><%= form.label :present_job %></td>
+      <td class="right"><%= form.text_area :present_job, id: :candidate_present_job %></td> <!--The Place where present work-->
+    </tr>
+
+    <tr>
+      <td  class="col-md-2 left"><%= form.label :expected_salary %></td>
+      <td class="right"><%= form.text_area :expected_salary, id: :candidate_expected_salary %></td> <!--Expected Result of Salary Candidate-->
+    </tr>
+
+    <tr>
+      <td  class="col-md-2 left"><%= form.label :final_salary %></td>
+      <td class="right"><%= form.text_area :final_salary, id: :candidate_final_salary %></td> <!--Finale Salary When Candidate commen in job-->
+    </tr>
+
+    <tr>
+      <td  class="col-md-2 left"><%= form.label :data_from %></td>
+      <td class="right"><%= form.text_area :data_from, id: :candidate_data_from %></td> <!--Where we was taked the data for candidate - Libkedin...-->
+    </tr>
+
+    <tr>
+      <td  class="col-md-2 left"><%= form.label :cand_comment %></td>
+      <td class="right"><%= form.text_area :cand_comment, id: :candidate_cand_comment  %></td>
+    </tr>
+
     <tr >
-    <td  class="col-md-2 left"><%= form.label :level_language %></td>
-    <td class="right"><%= form.text_area :level_language, id: :candidate_level_language %></td>
+      <td  class="col-md-2 left"><%= form.label :level_language %></td>
+      <td class="right"><%= form.text_area :level_language, id: :candidate_level_language %></td>
     </tr>
+
     <tr style="position: center">
       <td > <%= form.file_field :document, id: :candidate_document %></td>
     </tr>
