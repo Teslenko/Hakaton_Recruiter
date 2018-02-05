@@ -2,6 +2,9 @@
 <% if @blists.present? %>
 	
 		<table class="table">
+      <div style="padding-left: 20px">
+      <%= link_to 'Home', candidates_path, class: "btn btn-large btn-primary" %>
+        </div>
 		  <thead>
 		    <tr>
 		    	<th></th>
@@ -15,6 +18,7 @@
 		  <tbody>
 		  <% @blists.each do |blist| %>	
 		    <tr>
+          <td><%= link_to (image_tag blist.image.thumb.url), candidate_path(blist) %></td>
 		      <td><%= blist.name %></td>
 		      <td><%= blist.description %></td>
 		      <td><%= blist.dev_language %></td>
@@ -24,11 +28,12 @@
 		  <% end %>     
 		  </tbody>
 
-      <%= link_to 'Home', root_path, class: 'btn btn-secondary' %>
-      <%= link_to 'Back', candidates_path, class: 'btn btn-secondary' %>
+
 
 		</table>
+  <div style="padding-left: 20px">
+  <%= link_to 'Home', root_path, class: "btn btn-large btn-primary" %>
+  </div>
 	<% else %>
 	 <h3>No candidates in your black list</h3>	
 <% end %>
-<%= link_to 'Back', candidates_path, class: 'btn btn-primary' %>

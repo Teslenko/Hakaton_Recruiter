@@ -17,8 +17,9 @@
 
   <table class="table  table-striped fixedtable" >
     <div class="actions">
+
       <tr>
-        <td class="col-md-2 left image"><%= form.label :image, "Avatar"%><br>
+        <td style="position: center" class="col-md-2 left image"><%= form.label :image, "Avatar"%><br>
       <button class="favth-btn">
         <%= form.file_field :image, class: "btn btn-large btn-primary" %>
         <% if form.object.image? %>
@@ -27,9 +28,12 @@
             <%= form.label :remove_image %>
             <%= form.check_box :remove_image %>
         <% end %>
-      </button ></td>
+      </button >
+        </td>
+
         <td></td>
       </tr>
+
     </div>
 
     <tr>
@@ -87,7 +91,7 @@
       <td class="right"><%= form.text_area :cand_comment, id: :candidate_cand_comment  %></td>
     </tr>
 
-    <tr >
+    <tr>
       <td  class="col-md-2 left"><%= form.label :level_language %></td>
       <td class="right"><%= form.text_area :level_language, id: :candidate_level_language %></td>
     </tr>

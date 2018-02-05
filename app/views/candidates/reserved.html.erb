@@ -3,7 +3,9 @@
 	
 		<table class="table">
 
-      <%= link_to 'Home', candidates_path, class: "btn btn-large btn-primary" %>
+      <div style="padding-left: 20px">
+        <%= link_to 'Home', candidates_path, class: "btn btn-large btn-primary" %>
+      </div>
 		  <thead>
 		    <tr>
 		    	<th></th>
@@ -28,11 +30,11 @@
 
 
 		</table>
-  <%= link_to 'Home', root_path, class: "btn btn-large btn-primary" %> |
-  <%= link_to 'Back', candidates_path, class: "btn btn-large btn-primary" %>
+  <div style="padding-left: 20px">
+    <%= link_to 'Home', root_path, class: "btn btn-large btn-primary" %>
+  </div>
 	<% else %>
 	 <h3>You haven't reservered candidates</h3>		
 <% end %>
 
-<%= link_to 'Back', candidates_path, class: 'btn btn-primary' %>
 
