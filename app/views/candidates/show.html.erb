@@ -1,0 +1,122 @@
+<!---->
+
+
+<div style=" padding-bottom: 20px; padding-left: 70px" >
+  <%= link_to 'Home', candidates_path, class: 'btn btn-primary'  %>
+</div>
+
+<div class="input-group-addon">
+  <div id="error_explanation2">
+
+<h1>The Candidate <%= @candidate.name %> </h1>
+<p id="notice"><%= notice %></p>
+
+    <h3 ><%= @candidate.name %> </h3>
+
+    <h3>
+      Candidates status: <%= @candidate.status %>
+    </h3>
+
+<table class="table  table-striped fixedtable" >
+
+  <div>
+  <div>
+    <tr>
+      <th  id="Show_page_Image";  class="Image_Show col-md-2"><%= image_tag @candidate.image.thumb.url %></th>
+      <td></td>
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Name:</td>
+      <td class="right"><%= @candidate.name %></td>
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Description:</td>
+      <td class="right"><%= @candidate.description %></td>
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Programming Language:</td>
+      <td class="right"> <%= @candidate.dev_language %></td>
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Level Skills:</td>
+      <td class="right"><%= @candidate.level_skills %></td>
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Suggest Project:</td>
+      <td class="right"><%= @candidate.suggest_project %></td>
+
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Contact details:</td>
+      <td class="right"><%= @candidate.contact_data %></td>
+
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Present Job:</td>
+      <td class="right"><%= @candidate.present_job %></td>
+
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Expected Salary:</td>
+      <td class="right"><%= @candidate.expected_salary %></td>
+
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Final Salary:</td>
+      <td class="right"><%= @candidate.final_salary %></td>
+
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Data From:</td>
+      <td class="right"><%= @candidate.data_from %></td>
+
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Candidate comments:</td>
+      <td class="right"><%= @candidate.cand_comment %></td>
+
+    </tr>
+    <tr>
+      <td  class="col-md-2 left">Language Level:</td>
+      <td class="right"><%= @candidate.level_language %></td>
+
+    </tr>
+
+    <tr>
+      <td  class="col-md-2 left">Attach a Document:</td>
+      <td class="right"><% if @candidate.image.present? %>
+          <p>
+            <!--<p>Document:</p>-->
+            <%= link_to @candidate.document, @candidate.document.to_s, :target => "_blank" %>
+          </p>
+        <% else %>
+          <p>no document</p>
+        <% end %></td>
+    </tr>
+
+
+</div>
+    </div>
+</table>
+
+
+<strong>Add a comments:</strong><br><br>
+
+<%= render @candidate.comments %>
+<%= render 'comments/form' %>
+
+
+
+
+  </div>
+</div>
+
+<div class="actions" style="text-align: center; padding-top: 25px ">
+  <%= link_to 'Delete Candidate', @candidate,
+            method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %> |
+<%= link_to 'Edit', edit_candidate_path(@candidate), class: 'btn btn-primary' %>
+    <p class="actions" style="; text-align: left; padding-top: 0px; padding-left: 25px; ">
+      <%= link_to 'Home', candidates_path, class: 'btn btn-primary'  %>
+    </p>
+</div>
+

@@ -1,0 +1,204 @@
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+html {
+  //overflow-y: scroll;
+}
+
+body {
+  padding-top: 105px;
+  //padding-top: 70px;
+  width: 100%;
+  background-attachment: scroll;
+  //padding-bottom: px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+//////////////////////////////////* header */////////////////////////////////////
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    color: #51677d;
+  }
+}
+
+.navbar-inner{
+  background: #c4d8db;
+  padding: 0px;
+}
+
+.Logoimage{
+  float: left;
+}
+
+.p1 {
+  padding: 5px;
+}
+
+.buttons{
+  padding: 15px;
+}
+
+.Image_Show{
+  text-align: center;
+}
+
+//////////////////////////* footer */////////////////////////////////////
+
+footer {
+  margin-top: 250px; // на сколько отстоит футер от бади
+  padding-top: 0px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+  a {
+    color: #555;
+    padding: 20px;
+    font-size: 17px;
+    &:hover {
+      color: #222;
+    }
+  }
+  small {
+    float: left;
+    margin-top: 2%;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 50px;
+      margin-top: 3%;
+    }
+  }
+}
+.btn-primary{
+  background: #94b8dd;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -140px;
+
+}
+
+.railstutorial{
+  float: left;
+  margin-top: 0%;
+  padding-top: 10px;
+}
+
+.Tesl{
+  float: right;
+  margin-top: 0.5%;
+  padding-right: 50px;
+
+}
+
+footer :after {
+  content: "";
+  display: block;
+  //padding-bottom: 5px;
+}
+
+.footer, .push { /* .push must be the same height as footer */
+  height: 90px;
+}
+
+.footer{              /* тут мы делаем футер статичным и привязываем его к полу */
+  background: #c4d8db;
+  position: relative;
+  bottom: 0%;
+  width: 100%;
+
+
+}
+
+
+
+/////////////////////////////* typography */////////////////////////////////////
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  margin-bottom: 30px !important;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 17px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+#backButton{
+  margin-bottom: 25px;
+  position: relative;
+  left: 258%;
+  font-size: 17px;
+  height: 55px;
+  border-left: 1px solid #ccc !important;
+  border-bottom-left-radius: 4px !important;
+  border-top-left-radius: 4px !important;
+  padding: 12px !important;
+
+}
+
+.left{
+  text-align: left;
+  font-weight: bold;
+  padding: 8px 0 8px 40px !important;
+}
+
+.right{
+  padding: 8px 501px 8px 200px !important;
+}
+
+.input-group-addon{
+  padding: 6px 12px 35px 12px !important;
+}
+.name{
+  font-size: 17px;
+}
+.image{
+  padding: 25px 20px 25px 38px !important;
+}

@@ -1,0 +1,38 @@
+<h1> Reserved candidates: </h1>
+<% if @reserveds.present? %>
+	
+		<table class="table">
+
+      <%= link_to 'Home', candidates_path, class: "btn btn-large btn-primary" %>
+		  <thead>
+		    <tr>
+		    	<th></th>
+		      <th>Name</th>
+		      <th>Description</th>
+		      <th>Developing language</th>
+		      <th>Status</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  <% @reserveds.each do |reserved| %>	
+		    <tr>
+          <td><%= link_to (image_tag reserved.image.thumb.url), candidate_path(reserved) %></td>
+		      <td><%= reserved.name %></td>
+		      <td><%= reserved.description %></td>
+		      <td><%= reserved.dev_language %></td>
+		      <td><%= reserved.status %></td>
+		      <td><%= link_to 'Show', candidate_path(reserved), class: 'btn btn-primary' %></td>
+		    </tr> 
+		  <% end %>     
+		  </tbody>
+
+
+		</table>
+  <%= link_to 'Home', root_path, class: "btn btn-large btn-primary" %> |
+  <%= link_to 'Back', candidates_path, class: "btn btn-large btn-primary" %>
+	<% else %>
+	 <h3>You haven't reservered candidates</h3>		
+<% end %>
+
+<%= link_to 'Back', candidates_path, class: 'btn btn-primary' %>
+

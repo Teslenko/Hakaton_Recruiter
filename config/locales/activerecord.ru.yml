@@ -1,0 +1,9 @@
+ru:
+  activerecord:
+    models:
+      post: 'Кандидаты'
+    attributes:
+      post:
+        email: Почта
+        password: Пароль
+        password_confirmation: Повторите введенный пароль

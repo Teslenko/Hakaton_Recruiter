@@ -1,0 +1,34 @@
+<h1> Black list </h1>
+<% if @blists.present? %>
+	
+		<table class="table">
+		  <thead>
+		    <tr>
+		    	<th></th>
+		      <th>Name</th>
+		      <th>Description</th>
+		      <th>Developing language</th>
+		      <th>Status</th>
+		       <th colspan="3"></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  <% @blists.each do |blist| %>	
+		    <tr>
+		      <td><%= blist.name %></td>
+		      <td><%= blist.description %></td>
+		      <td><%= blist.dev_language %></td>
+		      <td><%= blist.status %></td>
+		      <td><%= link_to 'Show', candidate_path(blist), class: 'btn btn-primary' %></td>
+		    </tr> 
+		  <% end %>     
+		  </tbody>
+
+      <%= link_to 'Home', root_path, class: 'btn btn-secondary' %>
+      <%= link_to 'Back', candidates_path, class: 'btn btn-secondary' %>
+
+		</table>
+	<% else %>
+	 <h3>No candidates in your black list</h3>	
+<% end %>
+<%= link_to 'Back', candidates_path, class: 'btn btn-primary' %>

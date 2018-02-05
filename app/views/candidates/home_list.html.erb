@@ -1,0 +1,29 @@
+<h1> Home candidates: </h1>
+<% if @homes.present? %>
+	
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">Name</th>
+		      <th scope="col">Level skills</th>
+		      <th scope="col">Description</th>
+		      <th scope="col">Present job</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  <% @homes.each do |home| %>	
+		    <tr>
+		      
+		      <td><%= home.name %></td>
+		      <td><%= home.level_skills %></td>
+		      <td><%= home.description %></td>
+		      <td><%= home.present_job %></td>
+		      <td><%= link_to 'Show', candidate_path(home), class: 'btn btn-primary' %></td>
+		    </tr> 
+		  <% end %>     
+		  </tbody>
+		</table>
+	<% else %>
+	 <h3>You haven't home candidates</h3>		
+<% end %>	
+<%= link_to 'Home', root_path, class: 'btn btn-secondary' %>
