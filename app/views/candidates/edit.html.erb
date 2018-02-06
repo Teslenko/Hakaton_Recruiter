@@ -1,8 +1,11 @@
 <h1>Editing Candidate</h1>
 
 <%= render 'form', candidate: @candidate %>
+
 <div class="actions" style="text-align: center; ">
   <%= link_to 'Delete Candidate', @candidate, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
 </div>
+<div class="actions" style="text-align: left; padding-left: 25px ">
 <%= link_to 'Show', @candidate, class: 'btn btn-primary' %> |
 <%= link_to 'Home', candidates_path, class: 'btn btn-primary' %>
+</div>

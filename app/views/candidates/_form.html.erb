@@ -19,8 +19,9 @@
     <div class="actions">
 
       <tr>
-        <td style="position: center" class="col-md-2 left image"><%= form.label :image, "Avatar"%><br>
-      <button class="favth-btn">
+        <td   class="col-md-2 left image"><%= form.label :image, "Avatar"%><br>
+
+          <button class="favth-btn">
         <%= form.file_field :image, class: "btn btn-large btn-primary" %>
         <% if form.object.image? %>
             <%= image_tag form.object.image.thumb.url %>
@@ -29,6 +30,7 @@
             <%= form.check_box :remove_image %>
         <% end %>
       </button >
+
         </td>
 
         <td></td>
@@ -96,8 +98,8 @@
       <td class="right"><%= form.text_area :level_language, id: :candidate_level_language %></td>
     </tr>
 
-    <tr style="position: center">
-      <td > <%= form.file_field :document, id: :candidate_document %></td>
+    <tr class=""; style=" ">
+      <td > <%= form.file_field :document, id: :candidate_document, class: "btn btn-large btn-primary" %></td>
     </tr>
   </div>
     </div>
@@ -105,10 +107,13 @@
   </table>
 
 
- <div class="field">
-  <% unless current_page?(controller: 'candidates', action: 'new') %>          
-          <%= form.select :status, [['Home'], ['Reserved'], ['Black list']], selected: 'Home' %>
+ <div style="padding-left: 25px" class="dropdown show" >
+
+  <% unless current_page?(controller: 'candidates', action: 'new') %>
+       <div class="btn btn-large" style="background-color: #99ddd8;" type="button" data-toggle="dropdown"><%= form.select :status, [['Home'], ['Reserved'], ['Black list']], selected: 'Home' %></div>
   <% end %>
+   <b>     - Select group for candidate</b>
+
  </div>
 
 

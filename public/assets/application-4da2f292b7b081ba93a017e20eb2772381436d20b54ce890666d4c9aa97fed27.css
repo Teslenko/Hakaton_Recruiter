@@ -4024,7 +4024,8 @@ th {
 .table > tbody > tr > td,
 .table > tfoot > tr > th,
 .table > tfoot > tr > td {
-  padding: 8px;
+  padding: 2px;
+  padding-left: 25px;
   line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #ddd;

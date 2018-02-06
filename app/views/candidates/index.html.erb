@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+<!--////////head//////-->
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
+<!--////////body//////-->
 <body>
 <p id="notice"><%= notice %></p>
 <h1>Candidates</h1>
@@ -22,7 +25,7 @@
       <th>Description</th>
       <th>Developing language</th>
       <th>Status</th>
-      <th>Image</th>
+      <th></th>
 
       <th colspan="3">Action</th>
     </tr>
@@ -31,7 +34,7 @@
   <% @candidates.each do |candidate| %>
       <tr>
         <td> <% if candidate.image.present? %>
-            <%= link_to (image_tag candidate.image.thumb.url), candidate_path(candidate) %>      
+            <%= link_to (image_tag candidate.image.thumb.url), candidate_path(candidate), class: "img-responsive" %>
             <% else %>
             can't upload image
             <% end %>
@@ -42,7 +45,10 @@
         <td><%= candidate.status %></td>
         <td><%= link_to 'Show', candidate,class: "btn btn-large btn-primary", type: "button" %></td>
         <td><%= link_to 'Edit', edit_candidate_path(candidate),class: "btn btn-large btn-primary", type: "button" %></td>
-        <td><%= link_to 'Destroy', candidate, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-large btn-primary", type: "button" %></td>
+        <td >
+            <%= link_to 'Destroy', candidate, method: :delete,
+                         data: { confirm: 'Are you sure?' },class: "btn btn-large btn-primary", type: "button" %>
+        </td>
       </tr>
   <% end %>
   </tbody>
@@ -50,9 +56,9 @@
 
 
 <div style="padding-left: 10px" >
-  <%= link_to 'New Candidate', new_candidate_path, class: 'btn btn-primary', type: "button" %>
-  <%= link_to 'Black List', black_list_path, class: 'btn btn-primary', type: "button" %>
-  <%= link_to 'Reserved', reserved_path, class: 'btn btn-primary', type: "button" %>
+  <%= link_to 'New Candidate', new_candidate_path, class: 'btn btn-primary',  class: "btn btn-large btn-primary", type: "button" %>
+  <%= link_to 'Black List', black_list_path, class: 'btn btn-primary',  class: "btn btn-large btn-primary", type: "button" %>
+  <%= link_to 'Reserved', reserved_path, class: 'btn btn-primary',  class: "btn btn-large btn-primary", type: "button" %>
   <br>
 </div>
 
