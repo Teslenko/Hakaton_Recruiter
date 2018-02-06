@@ -6,7 +6,12 @@ class CandidatesController < ApplicationController
   # GET /candidates.json
   def index
     @candidates = Candidate.all
-    # @homes = Candidate.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @candidates.to_csv, filename: "candidates-#{Date.today}.csv" }
+    end
+
   end
 
   # GET /candidates/1

@@ -1,3 +1,5 @@
+require 'csv'
+
 class Candidate < ApplicationRecord
 
   mount_uploader :image, ImageUploader
@@ -16,7 +18,16 @@ class Candidate < ApplicationRecord
   validates :name, presence: true,
             length: { minimum: 5 }
 
+  def self.to_csv
+    attributes = %w{name description dev_language status}    #прописываем какие поля мы хотим в итоге скачать
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
 
+      all.each do |candidate|
+        csv << attributes.map{ |attr| candidate.send(attr) }#candidate.attributes.values_at(*attributes)
+      end
+    end
+  end
 
 
   private

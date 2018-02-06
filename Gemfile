@@ -53,6 +53,7 @@ gem 'devise'
 
 gem 'launchy'
 
+gem 'csv-importer'
 
 
 
