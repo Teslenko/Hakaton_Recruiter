@@ -19,7 +19,9 @@ class Candidate < ApplicationRecord
             length: { minimum: 5 }
 
   def self.to_csv
-    attributes = %w{name description dev_language status}    #прописываем какие поля мы хотим в итоге скачать
+    attributes = %w{name description dev_language status level_skills
+      suggest_project contact_data present_job expected_salary final_salary
+      data_from cand_comment level_language}    #прописываем какие поля мы хотим в итоге скачать
     CSV.generate(headers: true) do |csv|
       csv << attributes
 
@@ -32,7 +34,7 @@ class Candidate < ApplicationRecord
 
   private
   def image_size_validation
-    errors[:image] << "should be less than 2 Megabites" if image.size > 2.megabytes
+    errors[:image] << "should be less than 2 Megabites" if image.size > 10.megabytes
   end
   
 end
