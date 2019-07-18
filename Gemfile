@@ -41,7 +41,7 @@ gem 'paperclip'
 gem 'carrierwave', '~> 0.10.0'
  #uploading documents
 
-gem 'mini_magick', '~> 4.3'
+gem 'mini_magick', '~> 4.9'
 
 gem 'image_magick'
 
