@@ -38,7 +38,7 @@ gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 
 gem 'paperclip'
 
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', '~> 1.3.2'
  #uploading documents
 
 gem 'mini_magick', '~> 4.3'
